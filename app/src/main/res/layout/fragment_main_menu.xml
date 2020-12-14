@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.mechanic.mainMenuRep.MainMenuFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mainMenuConstraint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/listCarsB"
+            android:layout_width="270dp"
+            android:layout_height="143dp"
+            android:layout_marginStart="68dp"
+            android:layout_marginTop="120dp"
+            android:text="@string/list_cars"
+            android:textSize="30sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/createCarB"
+            android:layout_width="270dp"
+            android:layout_height="143dp"
+            android:layout_marginStart="68dp"
+            android:layout_marginTop="40dp"
+            android:text="@string/create_car"
+            android:textSize="30sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/listCarsB" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </layout>

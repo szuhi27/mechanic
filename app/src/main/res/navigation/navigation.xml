@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation.xml"
+    app:startDestination="@id/mainMenu">
+
+    <fragment
+        android:id="@+id/carsList"
+        android:name="com.example.mechanic.carsList"
+        android:label="fragment_cars_list"
+        tools:layout="@layout/fragment_cars_list" >
+        <action
+            android:id="@+id/action_carsList_to_mainMenu"
+            app:destination="@id/mainMenu" />
+    </fragment>
+    <fragment
+        android:id="@+id/createEntry"
+        android:name="com.example.mechanic.createEntry"
+        android:label="fragment_create_entry"
+        tools:layout="@layout/fragment_create_entry" >
+        <action
+            android:id="@+id/action_createEntry_to_mainMenu"
+            app:destination="@id/mainMenu" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainMenu"
+        android:name="com.example.mechanic.mainMenuRep.MainMenuFragment"
+        android:label="fragment_main_menu"
+        tools:layout="@layout/fragment_main_menu" >
+        <action
+            android:id="@+id/action_mainMenu_to_carsList"
+            app:destination="@id/carsList" />
+        <action
+            android:id="@+id/action_mainMenu_to_createEntry2"
+            app:destination="@id/createEntry" />
+    </fragment>
+</navigation>

@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">mechanic</string>
+    <string name="list_cars">List Cars</string>
+    <string name="create_car">Create Car</string>
+    <string name="home">Home</string>
+    <string name="save">Save</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="brand_text">Brand</string>
+    <string name="model_text">Model</string>
+    <string name="year_of_creation_text">Year of Creation</string>
+    <string name="problem_text">Problem</string>
+    <string name="clear">Clear</string>
+    <string name="cars_in_the_shop">Cars in the shop</string>
+
+    <string name="title"><![CDATA[<h3>AVAILABLE CARS</h3>]]></string>
+    <string name="brand"><![CDATA[<h3>Brand:</h3>]]></string>
+    <string name="model"><![CDATA[<h3>Model:</h3>]]></string>
+    <string name="creation"><![CDATA[<h3>Creation:</h3>]]></string>
+    <string name="problem"><![CDATA[<h3>Problem:</h3>]]></string>
+
+    <string name="cleared_message">All your data is gone forever.</string>
+
+</resources>
