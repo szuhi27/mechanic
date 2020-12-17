@@ -27,6 +27,7 @@ interface CarsDatabaseDao {
     @Delete
     fun delete(cars: Cars)
 
+
     @Query("DELETE FROM cars WHERE carId = :key")
     fun deleteById(key: Long)
 

@@ -40,8 +40,8 @@ class CarDetailViewModel(
 
     fun onDelete(){
         viewModelScope.launch {
-            database.deleteById(carKey)
-            onBack()
+            //database.deleteById(carKey)
+            _navigateToCarsList.value = true
         }
     }
 

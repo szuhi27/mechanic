@@ -18,7 +18,7 @@ data class Cars (
     var model: String = "Unknown",
 
     @ColumnInfo(name = "creationYear")
-    var creationYear: Int = 0,
+    var creationYear: Int = 1,
 
     @ColumnInfo(name = "problem")
     var problem: String = "Unknown")
