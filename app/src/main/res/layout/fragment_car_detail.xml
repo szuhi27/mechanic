@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <data>
+        <variable
+            name="carDetailViewModel"
+            type="com.example.mechanic.carDetailRep.CarDetailViewModel" />
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.mechanic.carDetailRep.CarDetailFragment">
+
+        <TextView
+            android:id="@+id/brandT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="205dp"
+            android:layout_marginTop="52dp"
+            android:textSize="30sp"
+            app:carBrand="@{carDetailViewModel.car}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/modelT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="205dp"
+            android:layout_marginTop="30dp"
+            android:textSize="25sp"
+            app:carModel="@{carDetailViewModel.car}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/brandT" />
+
+        <TextView
+            android:id="@+id/yearT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="205dp"
+            android:layout_marginTop="70dp"
+            android:textSize="25sp"
+            app:carYear="@{carDetailViewModel.car}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/modelT" />
+
+        <TextView
+            android:id="@+id/problemT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="205dp"
+            android:layout_marginTop="80dp"
+            android:textSize="20sp"
+            app:carProblem="@{carDetailViewModel.car}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/yearT" />
+
+        <Button
+            android:id="@+id/deleteB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="148dp"
+            android:layout_marginTop="130dp"
+            android:onClick="@{()-> carDetailViewModel.onDelete()}"
+            android:text="@string/delete"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/problemT" />
+
+        <Button
+            android:id="@+id/backB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="160dp"
+            android:layout_marginTop="36dp"
+            android:onClick="@{()-> carDetailViewModel.onBack()}"
+            android:text="@string/back"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/deleteB" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

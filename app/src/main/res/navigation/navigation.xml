@@ -7,18 +7,21 @@
 
     <fragment
         android:id="@+id/carsList"
-        android:name="com.example.mechanic.carsList"
+        android:name="com.example.mechanic.carsListRep.CarsListFragment"
         android:label="fragment_cars_list"
-        tools:layout="@layout/fragment_cars_list" >
+        tools:layout="@layout/fragment_cars_list">
         <action
             android:id="@+id/action_carsList_to_mainMenu"
             app:destination="@id/mainMenu" />
+        <action
+            android:id="@+id/action_carsList_to_carDetail"
+            app:destination="@id/carDetail" />
     </fragment>
     <fragment
         android:id="@+id/createEntry"
-        android:name="com.example.mechanic.createEntry"
+        android:name="com.example.mechanic.createEntryRep.CreateEntryFragment"
         android:label="fragment_create_entry"
-        tools:layout="@layout/fragment_create_entry" >
+        tools:layout="@layout/fragment_create_entry">
         <action
             android:id="@+id/action_createEntry_to_mainMenu"
             app:destination="@id/mainMenu" />
@@ -34,5 +37,17 @@
         <action
             android:id="@+id/action_mainMenu_to_createEntry2"
             app:destination="@id/createEntry" />
+    </fragment>
+    <fragment
+        android:id="@+id/carDetail"
+        android:name="com.example.mechanic.carDetailRep.CarDetailFragment"
+        android:label="fragment_car_detail"
+        tools:layout="@layout/fragment_car_detail">
+        <argument
+            android:name="carKey"
+            app:argType="long"/>
+        <action
+            android:id="@+id/action_carDetail_to_carsList"
+            app:destination="@id/carsList" />
     </fragment>
 </navigation>

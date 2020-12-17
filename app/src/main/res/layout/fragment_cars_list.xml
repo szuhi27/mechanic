@@ -46,6 +46,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="64dp"
             android:layout_marginBottom="38dp"
+            android:onClick="@{()-> carsListViewModel.onHome()}"
             android:text="@string/home"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"

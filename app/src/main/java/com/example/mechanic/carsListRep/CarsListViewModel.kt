@@ -14,6 +14,28 @@ class CarsListViewModel (
 
     val cars = database.getAllCars()
 
+    private val _navigateToMainMenu = MutableLiveData<Boolean?>()
+
+    val navigateToMainMenu: LiveData<Boolean?>
+        get() = _navigateToMainMenu
+
+    fun donaNavigating(){
+        _navigateToMainMenu.value = null
+    }
+
+
+    private val _navigateToCarDetail = MutableLiveData<Long>()
+    val navigateToCarDetail: LiveData<Long>
+        get() = _navigateToCarDetail
+
+    fun onCarClicked(id: Long){
+        _navigateToCarDetail.value = id
+    }
+
+    fun onCarDetailNavigated(){
+        _navigateToCarDetail.value = null
+    }
+
     val carsString = Transformations.map(cars){cars ->
         formatCars(cars, application.resources)
     }
@@ -35,6 +57,12 @@ class CarsListViewModel (
         viewModelScope.launch {
             clear()
             _showSnackbarEvent.value = true
+        }
+    }
+
+    fun onHome(){
+        viewModelScope.launch {
+            _navigateToMainMenu.value = true
         }
     }
 }

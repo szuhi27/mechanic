@@ -8,6 +8,9 @@
         <variable
             name="car"
             type="com.example.mechanic.database.Cars" />
+        <variable
+            name="clickListener"
+            type="com.example.mechanic.carsListRep.CarsListener" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -21,10 +24,11 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="10dp"
-            tools:text="@string/brand_text"
+            android:textSize="20sp"
+            app:carBrand="@{car}"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:carBrand="@{car}" />
+            tools:text="@string/brand_text" />
 
         <TextView
             android:id="@+id/car_model"
@@ -32,10 +36,11 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="7dp"
             android:layout_marginTop="10dp"
-            tools:text="@string/model_text"
+            android:textSize="20sp"
+            app:carModel="@{car}"
             app:layout_constraintStart_toEndOf="@+id/car_brand"
             app:layout_constraintTop_toTopOf="parent"
-            app:carModel="@{car}" />
+            tools:text="@string/model_text" />
 
         <TextView
             android:id="@+id/car_year"
@@ -43,24 +48,24 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="14dp"
-            tools:text="@string/year_of_creation_text"
+            android:textSize="18sp"
+            app:carYear="@{car}"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/car_brand"
-            app:carYear="@{car}" />
+            tools:text="@string/year_of_creation_text" />
 
         <TextView
             android:id="@+id/car_problem"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="10dp"
-            tools:text="@string/problem_text"
-            app:layout_constraintBottom_toBottomOf="@+id/car_model"
+            android:textSize="17sp"
+            app:carProblem="@{car}"
+            app:layout_constraintBottom_toBottomOf="@+id/car_year"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/car_year"
             app:layout_constraintTop_toTopOf="parent"
-            app:carProblem="@{car}" />
+            tools:text="@string/problem_text" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>

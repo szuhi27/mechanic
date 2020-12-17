@@ -20,11 +20,19 @@ class CreateEntryViewModel (
     fun onSave(brandT: EditText, modelT: EditText, creationT: EditText, problemT: EditText){
         viewModelScope.launch {
             val newCar = Cars()
-            newCar.brand = brandT.text.toString()
-            newCar.model = modelT.text.toString()
-            val yearString = creationT.text.toString()
-            newCar.creationYear = Integer.parseInt(yearString)
-            newCar.problem = problemT.text.toString()
+            if(brandT.text.toString() != "") {
+                newCar.brand = brandT.text.toString()
+            }
+            if(modelT.text.toString() != "") {
+                newCar.model = modelT.text.toString()
+            }
+            if(creationT.text.toString() != "") {
+                val yearString = creationT.text.toString()
+                newCar.creationYear = Integer.parseInt(yearString)
+            }
+            if(problemT.text.toString() != "") {
+                newCar.problem = problemT.text.toString()
+            }
             insert(newCar)
         }
     }

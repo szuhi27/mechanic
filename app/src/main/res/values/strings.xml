@@ -12,6 +12,7 @@
     <string name="problem_text">Problem</string>
     <string name="clear">Clear</string>
     <string name="cars_in_the_shop">Cars in the shop</string>
+    <string name="header_text">Car Data</string>
 
     <string name="title"><![CDATA[<h3>AVAILABLE CARS</h3>]]></string>
     <string name="brand"><![CDATA[<h3>Brand:</h3>]]></string>
@@ -20,5 +21,9 @@
     <string name="problem"><![CDATA[<h3>Problem:</h3>]]></string>
 
     <string name="cleared_message">All your data is gone forever.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="delete">Delete</string>
+    <string name="back">Back</string>
 
 </resources>

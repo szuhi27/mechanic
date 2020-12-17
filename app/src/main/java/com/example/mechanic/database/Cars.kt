@@ -12,14 +12,14 @@ data class Cars (
     val carId: Long = 0L,
 
     @ColumnInfo(name = "brand")
-    var brand: String = "",
+    var brand: String = "Unknown",
 
     @ColumnInfo(name = "model")
-    var model: String = "",
+    var model: String = "Unknown",
 
     @ColumnInfo(name = "creationYear")
     var creationYear: Int = 0,
 
     @ColumnInfo(name = "problem")
-    var problem: String = "")
+    var problem: String = "Unknown")
 
